@@ -36,4 +36,18 @@ describe "料金・割引サービス表" do
             end
         end
     end
+
+    describe "追加料金" do
+        context "プレミアボックスシート" do
+            it "一般+1000円" do
+                expect(@theater.price("一般", true, false)).to eq 2900
+            end
+        end
+    
+        context "DOLBY ATOMS 鑑賞料金" do
+            it "一般+200円" do
+                expect(@theater.price("一般", false, true)).to eq 2100
+            end
+        end
+    end
 end
