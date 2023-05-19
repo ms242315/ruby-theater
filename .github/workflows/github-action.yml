@@ -13,9 +13,9 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.1.2"
-      - name: ls
-        run: ls -a
       - name: Run RSpec
         run: |
           gem install rspec
+          git clone https://github.com/ms242315/ruby-theater.git
+          cd ruby-theater
           rspec
