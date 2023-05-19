@@ -13,6 +13,8 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.1.2"
+      - name: ls
+        run: ls -a
       - name: Run RSpec
         run: |
           gem install rspec
