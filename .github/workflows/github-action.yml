@@ -15,5 +15,5 @@ jobs:
           ruby-version: "3.1.2"
       - name: Run RSpec
         run: |
-        gem install rspec
-        rspec
+          gem install rspec
+          rspec
