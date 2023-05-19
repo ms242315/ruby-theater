@@ -9,6 +9,8 @@ jobs:
     name: RSpec
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -16,6 +18,4 @@ jobs:
       - name: Run RSpec
         run: |
           gem install rspec
-          git clone https://github.com/ms242315/ruby-theater.git
-          cd ruby-theater
           rspec
